@@ -1,13 +1,11 @@
 import { loadingStarted, loadingFinished } from '../../utils/loading';
 
-import { unconfirmedTransactions, transactions as getTransactions, getAccount, transaction, extractAddress } from '../../utils/api/account';
+import { unconfirmedTransactions, transactions as getTransactions, getAccount, extractAddress } from '../../utils/api/account';
 import { getDelegate } from '../../utils/api/delegate';
 import {
   transactionsFailed,
   transactionsFiltered,
   transactionsInit,
-  transactionLoaded,
-  transactionLoadFailed,
 } from '../../actions/transactions';
 
 import actionTypes from '../../constants/actions';

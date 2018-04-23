@@ -79,8 +79,8 @@ export const transactionLoadFailed = data => ({
 
 export const transactionLoadRequested = ({ activePeer, id }) =>
   (dispatch) => {
-    transaction(activePeer, { id })
-      .then(({ response }) => {
+    transaction({ activePeer, id })
+      .then((response) => {
         dispatch(transactionLoaded({ ...response }));
       }).catch((error) => {
         dispatch(transactionLoadFailed({ error }));
